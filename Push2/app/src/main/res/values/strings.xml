@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Push</string>
+    <string name="button">전송</string>
+    <string name="titleInput">제목입력하세요</string>
+    <string name="contentTextView">내용입력하세요</string>
+    <string name="yourTitle">your title</string>
+    <string name="yourContent">your content</string>
+    <!--<string name="default_notification_channel_name">4c7163baa3c6cec7</string>-->
+</resources>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/main_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <!-- 모집 기간 -->
+        <TextView
+            android:id="@+id/tv_deadline"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="@string/deadline"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            />
+
+        <EditText
+            android:id="@+id/et_deadline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:hint="@string/period_hint" />
+            <requestFocus/>
+
+
+        <!-- 달력 뷰 -->
+        <!-- 라이브러리 : https://github.com/prolificinteractive/material-calendarview -->
+        <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/calendarView"
+            android:layout_width="400dp"
+            android:layout_height="300dp"
+            app:mcv_showOtherDates="all"
+            app:mcv_selectionColor="#0eb8f5"
+            app:mcv_selectionMode="range"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:visibility="gone"
+            />
+
+            <!-- 입력 버튼 -->
+            <Button
+                android:id="@+id/input"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:text="@string/input"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:visibility="gone"/>
+
+        <!-- 모집 인원 -->
+        <TextView
+            android:id="@+id/tv_peopleNum"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="@string/peopleNum"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            />
+
+        <!-- 모집 인원 수 number Picker -->
+        <!-- 라이브러리 : https://github.com/travijuu/NumberPicker -->
+        <com.travijuu.numberpicker.library.NumberPicker
+            android:id="@+id/number_picker"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            />
+
+        <!-- 모집 성별 -->
+        <TextView
+            android:id="@+id/tv_gender"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="@string/gender"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            />
+
+        <!-- 모집 성별 선택 토글 버튼 -->
+        <!-- 라이브러리 : https://github.com/jlhonora/multistatetogglebutton -->
+        <org.honorato.multistatetogglebutton.MultiStateToggleButton
+            android:id="@+id/toggle_gender"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            />
+
+
+        <!-- 모집 연령 -->
+        <TextView
+            android:id="@+id/tv_age"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="@string/age"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            />
+
+        <!-- 모집 연령 스피너 -->
+        <!-- 라이브러리 : https://github.com/xyxyLiu/Edit-Spinner -->
+        <com.reginald.editspinner.EditSpinner
+            android:id="@+id/spinner_age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:editable="false"
+            app:dropDownDrawable="@drawable/spinner_dropdown"
+            app:dropDownDrawableSpacing="15dp"
+            app:dropDownDrawableWidth="25dp"
+            app:dropDownDrawableHeight="25dp"
+            />
+
+        <!-- 모집 학력 -->
+        <TextView
+            android:id="@+id/tv_graduate"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="@string/graduate"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            />
+
+        <!-- 학력 선택 스피너 -->
+        <!-- 라이브러리 : https://github.com/xyxyLiu/Edit-Spinner -->
+        <com.reginald.editspinner.EditSpinner
+            android:id="@+id/spinner_graduate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/graduate_hint"
+            android:editable="false"
+            app:dropDownDrawable="@drawable/spinner_dropdown"
+            app:dropDownDrawableSpacing="15dp"
+            app:dropDownDrawableWidth="25dp"
+            app:dropDownDrawableHeight="25dp"
+            />
+
+
+        <!-- 우대 사항 -->
+        <TextView
+            android:id="@+id/tv_favor"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="@string/favor"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            />
+
+        <!-- 우대사항 스피너 -->
+        <!-- 라이브러리 : https://github.com/xyxyLiu/Edit-Spinner -->
+        <com.reginald.editspinner.EditSpinner
+            android:id="@+id/spinner_favor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/favor_hint"
+            android:editable="false"
+            app:dropDownDrawable="@drawable/spinner_dropdown"
+            app:dropDownDrawableSpacing="15dp"
+            app:dropDownDrawableWidth="25dp"
+            app:dropDownDrawableHeight="25dp"
+            />
+
+        <!-- 직접 입력 EditText -->
+        <EditText
+            android:id="@+id/et_favor_other"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textLongMessage"
+            android:hint="@string/favor_other_hint"
+            android:textSize="16sp"
+            android:visibility="gone"/>
+
+        <!-- 최종 제출 -->
+        <Button
+            android:id="@+id/finalinput"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:text="@string/input_button"/>
+    </LinearLayout>
+</ScrollView>

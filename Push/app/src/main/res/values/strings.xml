@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Push</string>
+    <string name="button">전송</string>
+    <!--<string name="default_notification_channel_name">4c7163baa3c6cec7</string>-->
+</resources>

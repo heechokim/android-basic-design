@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">gridview</string>
+    <string name="textView">텍스트뷰입니다</string>
+</resources>

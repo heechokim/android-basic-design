@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">아르바이트 구하기 폼</string>
+    <string name="deadline">아르바이트생을 모집할 기간을 입력하세요</string>
+    <string name="peopleNum">모집할 아르바이트 생의 인원수를 입력하세요</string>
+    <string name="gender">모집할 아르바이트 생의 성별을 입력하세요</string>
+    <string name="age">모집할 아르바이트 생의 연령을 입력하세요</string>
+    <string name="graduate">모집할 아르바이트 생의 학력을 입력하세요</string>
+    <string name="favor">우대 사항을 입력하세요</string>
+    <string name="input">입력</string>
+    <string name="favor_hint">예 ) 경력자 우대</string>
+    <string name="input_button">입력</string>
+    <string name="graduate_hint">예 ) 고졸 이상</string>
+    <string name="cofirm">모집할 아르바이트생 정보를 확인하세요!</string>
+    <string name="period_hint"><font size ="16">시작날짜를 클릭한 후, 마감날짜를 클릭하세요</font></string>
+    <string-array name="toggle_gender">
+        <item>남</item>
+        <item>여</item>
+    </string-array>
+    <string-array name="spinner_graduate">
+        <item>고등학교 졸업 이상</item>
+        <item>대학교 졸업 이상</item>
+        <item>무관</item>
+    </string-array>
+    <string-array name="spinner_favor">
+        <item>경력자 우대</item>
+        <item>인근 거주자 우대</item>
+        <item>직접입력</item>
+    </string-array>
+    <string-array name="spinner_age">
+        <item>15살 ~ 20살</item>
+        <item>21살 ~ 25살</item>
+        <item>26살 ~ 30살</item>
+        <item>31살 ~ 35살</item>
+        <item>36살 ~ 40살</item>
+        <item>무관</item>
+    </string-array>
+    <string name="favor_other_hint">우대사항을 직접 입력해주세요</string>
+</resources>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FireMissilesDialogFragment</string>
+    <string name="dialog_fire_missiles">Fire missiles?</string>
+    <string name="fire">FIRE</string>
+    <string name="cancel">CANCEL</string>
+    <string name="button">클릭해보세요</string>
+</resources>

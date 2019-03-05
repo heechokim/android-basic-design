@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#FFFFFF">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="100px">
+
+        <ListView
+            android:id="@+id/myArbietList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dividerHeight="2dp"
+            >
+        </ListView>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/buttonForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            app:behavior_hideable="true"
+            >
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:id="@+id/registerBtn"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                app:bootstrapBrand="info"
+                app:buttonMode="regular"
+                app:showOutline="false"
+                app:roundedCorners="false"
+                app:bootstrapText="아르바이트생 공고글 추가"
+                />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

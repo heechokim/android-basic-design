@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">내 아르바이트생 목록</string>
+
+    <!-- 아르바이트 리스트 상단 네비게이션 -->
+    <string name="date">공고작성일</string>
+    <string name="contents">공고글</string>
+    <string name="date_sample1">2019-02-25 16:50</string>
+    <string name="peopleNum_sample1">5명 모집</string>
+    <string name="period_sample1">2019-02-14 ~ 2019-02-26</string>
+    <string name="check_sample1">마감</string>
+</resources>

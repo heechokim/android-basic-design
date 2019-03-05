@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">0110_2_GoogleMap</string>
+    <string name="EditText_InputLocation">주소를 입력하세요</string>
+    <string name="Button_Search">찾기</string>
+</resources>

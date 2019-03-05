@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal|center_vertical"
+        android:paddingTop="5dp"
+        android:paddingBottom="0dp"
+        android:orientation="vertical"
+        android:background="#FFFFFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tv_storeNm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_check_ing"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="#4393e2"
+                        android:textSize="13sp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:padding="5dp"
+                        android:visibility="gone"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_check_finish"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="#f5c1c1"
+                        android:textSize="13sp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:padding="5dp"
+                        android:visibility="gone"
+                        />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_period"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                   />
+
+
+                <TextView
+                    android:id="@+id/tv_peopleNum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:gravity="left"
+                    android:padding="5dp"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!-- 상세보기, 재등록 버튼 부분 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal">
+
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/detailsBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            app:bootstrapText="상세보기"
+            app:bootstrapBrand="secondary"
+            app:buttonMode="regular"
+            app:showOutline="false"
+            app:roundedCorners="false"
+            />
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:id="@+id/registerBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                app:bootstrapText="재공고"
+                app:bootstrapBrand="primary"
+                app:buttonMode="regular"
+                app:showOutline="false"
+                app:roundedCorners="false"
+            />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

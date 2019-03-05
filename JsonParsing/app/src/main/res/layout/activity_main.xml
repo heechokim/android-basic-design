@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:gravity="center_vertical"
+            android:text="@string/textView"
+            android:textColor="@color/colorPrimary"
+            android:textSize="25sp" />
+        <TextView
+            android:id="@+id/textView_total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            />
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:gravity="center_vertical"
+            android:text="@string/textView1"
+            android:textColor="@color/colorPrimary"
+            android:textSize="25sp" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:textSize="25sp"
+            android:gravity="center_vertical"
+            />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:gravity="center_vertical"
+            android:text="@string/textView3"
+            android:textColor="@color/colorPrimary"
+            android:textSize="25sp" />
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:textSize="25sp"
+            android:gravity="center_vertical"
+            />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
