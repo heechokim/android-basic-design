@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:orientation="vertical">
+
+        <!-- 메인 이미지 레이아웃 -->
+        <RelativeLayout
+            android:id="@+id/layout_main"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/iv_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/iv_main"
+                />
+            <TextView
+                android:id="@+id/tv_imageview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text = "이미지를 넣어주세요"
+                android:textSize="18sp"
+                android:gravity="center_horizontal|center_vertical"
+                android:visibility="visible"/>
+        </RelativeLayout>
+
+        <!-- 버튼 레이아웃 -->
+        <LinearLayout
+            android:id="@+id/layout_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_camera"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="사진 촬영"/>
+            <Button
+                android:id="@+id/btn_album"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text = "앨범 선택"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
