@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_main"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:text = "아래 유튜브 잘 보이니?"
+        android:textSize="25sp"
+        android:gravity="center_horizontal|center_vertical"/>
+
+    <Button
+        android:id="@+id/btn_main"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text = "유튜브 재생"
+        />
+
+    <com.google.android.youtube.player.YouTubePlayerView
+        android:id="@+id/yv_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
+
+    </com.google.android.youtube.player.YouTubePlayerView>
+
+</LinearLayout>
