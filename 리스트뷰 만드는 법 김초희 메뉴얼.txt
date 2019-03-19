@@ -1,0 +1,59 @@
+리스트뷰 만드는 법 김초희 메뉴얼
+
+MyArbietList 프로젝트를 참고하자
+
+1. 리스트뷰만을 담은 액티비티를 만들자
+메인.java 와 연결되야 한다
+메인.java에 이 xml을 선언하고 초기화 해주자
+
+2. 커스튬뷰만을 담은 액티비티를 만들자
+커스텀.java와 연결되도록 만들지 말고 그냥 xml 파일 하나를 생성해서 커스텀 뷰를 만들어 놓자
+
+3. 어댑터 자바 클래스를 만들자
+자바 클래스(여기서는 한개의 독립된 자바 파일을 의미)를 생성하고 파일 이름을 Adapter로 하자
+그리고 이 클래스는 BaseAdapter 라는 클래스를 상속받도록 작성해야 한다
+
+4. 메인.java로 돌아가서 만든 Adapter 클래스를 선언하고 초기화해준다 
+
+5. MyItem 자바 클래스를 만들자 
+자바 클래스(여기서는 한개의 독립된 자바 파일을 의미)를 생성하고 파일 이름을 MyItem으로 하자
+이 클래스의 변수는 커스텀 뷰에 들어갈 데이터들이다 커스텀 뷰에 들어갈 데이터들을 자료형을 고려해서 변수로 선언해 준다 
+그 후 알트 + 인서트 키를 눌러 getter and setter 을 클릭하면 자동으로 get, set 함수가 만들어지는 것을 볼 수 있다
+
+6. 어댑터 클래스로 돌아가서 Context 변수를 하나 선언한다
+그리고 ArrayList<MyItem> 도 하나 선언한다 
+이 어레이 리스트의 하나의 원소에는 하나의 커스텀 뷰에 들어갈 데이터들이 저장될 것이다
+그 후 알트 + 인서트를 눌러 생성자를 하나 생성하는데 인자로는 앞에서 선언한 두 변수인 Context와 ArrayList가 들어가도록 생성한다
+
+7. 메인.java 클래스로 돌아가서 미리 초기화 해둔 어댑터의 인자에 mContext와 ArrayList를 넣어줘야 한다
+이 과정을 위해 메인.java 클래스에 Context변수를 선언하고 this로 초기화 해준다. 또, ArrayList<MyItem>변수를 선언하고 초기화 해준다 이때 MyItem클래스도 같이 초기화 해줘야 한다
+그 후에 미리 초기화 해둔 어댑터의 인자에 초기화 해준 mContext와 ArrayList 변수를 넣는다
+
+8. 메인.java와 연결된 리스트xml에 adapter 을 setAdapter로 연결시킨다
+
+9. 메인.java의 확장 함수로 반환값이 void인 addItem 이라는 함수를 만든다
+이 함수내에서 MyItem객체를 선언한다 
+그리고 addItem 인자에 커스텀 뷰에 들어갈 데이터들을 써준다 
+그 후 addItem 내에서 선언한 MyItem객체의 set함수를 통해 커스텀 뷰에 들어갈 데이터들을 MyItem 객체내에 셋해준다
+그 다음 메인.java에서 선언해준 ArrayList변수에 MyItem객체를 add 시킨다 (ArrayList변수.add(MyItem객체) ; )
+--> 이 함수에서 파싱한 데이터(따로 쓰레드 만들어서 파싱하면 그 쓰레드를 이 함수 내에서 호출하면 됨) myItem에 넣고 arraylist에 add 해주는 것이다★★★중요!
+
+10. 이 addItem 함수를 Oncreate() 내에서 listview에 adapter을 새팅해준 코드 윗부분에 호출해준다
+
+11. adapter 클래스로 가서 getView메소드 내에 custom뷰를 선언하고 초기화 해준다
+
+
+        if(convertView == null){
+            LayoutInflater inflater = (LayoutInflater)mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            convertView = inflater.inflate(R.layout.activity_customview,null);
+        } 
+이 코드를 꼭 넣어준다
+
+커스텀 뷰를 초기화 할 때 findViewById함수 앞에 converView.findViewById 라고 해줘야 한다
+그리고 나서 데이터를 커스텀 뷰에 set해줘야 하는데 이때는 예를 들어
+textview.setText(어댑터내에서 선언해준 어레이리스트 객체.get(position).get함수)); 라고
+getter을 이용해 set해줘야 한다
+return값은 convertView로 해준다
+
+그리고 getCount()의 반환값은 Arraylist객체.size() 로 해주고 getItem은 arraylist.get(position)으로 해준다
+
