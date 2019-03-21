@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">YoutubeAPI_0315</string>
-    <string name="youtube_key">AIzaSyDBIsIitvKLoPqhQK-pjTxp84brdLYk5y0</string>
+    <string name="youtube_key">자신의API키를 여기에 쓰면됨</string>
 </resources>
