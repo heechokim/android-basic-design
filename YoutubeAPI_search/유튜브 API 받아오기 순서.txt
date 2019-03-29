@@ -1,0 +1,6 @@
+1. 구글 개발자 콘솔에서 프로젝트를 설정
+2. youtube jar 파일을 다운로드 한 후 프로젝트에 추가
+3. youtube api 키를 받고 안드로이드로 제한걸기
+
+http://minpaprograming.blogspot.com/2018/01/android-studio-api.html
+이 블로그 참고
